@@ -75,7 +75,15 @@ ul {
 }
 
 img {
-	width:200px;
+	width:180px;
+	height:auto;
+	margin-left:10px;
+	margin-right:10px;
+	border: solid white 2px;
+}
+
+.rupees img{
+	width:100px;
 	height:auto;
 	margin-left:10px;
 	margin-right:10px;
@@ -83,7 +91,7 @@ img {
 }
 
 .map {
-margin-bottom:10px;
+margin-bottom:5px;
 text-align:center;
 }
 
@@ -111,4 +119,8 @@ text-align:center;
 
 label {
 cursor: pointer;   
+}
+
+input{
+	margin-bottom:10px;
 }

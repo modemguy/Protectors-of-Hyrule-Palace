@@ -25,6 +25,10 @@
 				<li><div class="follower2">
 					<img src="img/sheik.jpg">
 				</div></li>
+				
+				<li><div class="rupees">
+					<img src="img/rupee.jpg">
+				</div></li>
 			</ul>
 		</div>
 		

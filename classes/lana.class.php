@@ -5,7 +5,7 @@
 			$this->melee = 2;
 			$this->ranged = 4;
 			$this->healing = 8;
-			$this->description = "text";
+			$this->description = "Lana the white sorceress. She has a deep knowledge of spells and monsters and is a master healer.";
 		}
 	}
 ?>
