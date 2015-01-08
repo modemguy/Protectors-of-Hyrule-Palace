@@ -1,23 +1,32 @@
 <?php
 	class Level {
-		private $intro, $look, $chest;
+		private $name;
+		private $intro; private $look;
+		private $isMonsters; private $Monsters;
+		private $isBoss; private $Monster;
+
+		private $isChest; private $Chest;
+		private $isChallenge; private $Challenge;
 		
 		public function __get($name){
-			return $this->data[$name];
+			if (property_exists($this, $name)){
+                return $this->$name;
+            } else { return "FAIL"; }
 		}
 		
 		public function __set($name, $value){
-			$this->data[$name] = $value;
+			if (property_exists($this, $name)){
+				$this->$name = $value;
+			}
 		}
 		
-		public function new($intro, $look, $chest){
+		public function __construct($name, $intro, $look){
+			$this->name = $name;
 			$this->intro = $intro;
 			$this->look = $look;
-			$this->leave = $leave;
-			$this->chest = $chest;
 		}
 	}
-
+/*
 	//LÄXA TILL DAVID #1
 	class skapabana{
 		$bana[];
@@ -40,4 +49,5 @@
 		$monster[1] = new monster("Namn","Beskrivning");
 		$monster[2] = new monster("Dark player","Beskrivning");
 	}
+*/
 ?>

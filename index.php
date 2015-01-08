@@ -7,20 +7,8 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/ajax.js"></script>
 		<script>
-			function getHeroInfo(hero){
-				var data = {"hero": hero};
-				$.ajax({
-					url: 'heroInfo.php', type: 'POST', datatype: 'json', data: data,
-					success: function(data) {
-						var parse = JSON.parse(data, function (key,value){
-							if (!key){return;}
-							document.getElementById(key).innerHTML = key + ":" + value;
-						});
-					}
-				});
-			}
-			
 			function validateForm(){
 				var submitOk = true;
 

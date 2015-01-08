@@ -1,3 +1,17 @@
+<?php
+	session_start();
+	
+	include("classes/character.class.php");
+	include("classes/link.class.php");
+	include("classes/lana.class.php");
+	include("classes/sheik.class.php");
+	include("classes/level.class.php");
+	include("classes/levels.class.php");
+	include("functions.php");
+	
+	gameStart();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,11 +19,12 @@
 		<title>Protectors of Hyrule Palace</title>
 		<link rel="stylesheet" type="text/css" href="css/mayer.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<script>
-
-		</script>
 	</head>
-	
+	<script>
+		function loadLevel(){
+			
+		}
+	</script>
 	<body>
 	
 		<div class="heroes">
@@ -53,23 +68,19 @@
 	
 		<div class="map">
 			<ul>
-				<li>Entrance to Dungeon</li>
-				<li>Cracked wall</li>
-				<li>Broken Bridge</li>
-				<li>Deep water</li>
-				<li>Ice wall</li>
-			</ul>	
-			<ul>	
-				<li>Bottomless pit</li>
-				<li>Main Hallway</li>
-				<li>Big Room</li>
-				<li>Entrance to Ganon</li>
-				<li>Ganons Chamber</li>
+			<?php
+				foreach($_SESSION["levels"] as $level){
+					$currLevel = array_search($level, $_SESSION["levels"]);
+					if ($currLevel % 5 == 0 && $currLevel != 0){echo "</ul><ul>";}
+					
+					echo "<li onclick=\"alert('BANA $currLevel');\">$level->name</li>";
+				}
+			?>
 			</ul>
 		</div>
 	
 		<div class="description ">
-		
+			text här
 		</div>
 			
 		<div class="navbar">
