@@ -19,7 +19,7 @@
 		default:
 			return;
 	}
-
+	
 	$retval = array('name' => $hero->name,'melee' => $hero->melee,'ranged' => $hero->ranged,'healing' => $hero->healing,'description' => $hero->description);
 	echo json_encode($retval);
 ?>

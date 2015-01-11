@@ -1,3 +1,8 @@
+html{
+	min-width: 100%;
+	height: auto;
+}
+
 h1 {
 	font-size:40px;
 	font-family:gothic;
@@ -16,20 +21,29 @@ body {
 	}
 
 .description {
-	width: 100%;
-	height: 300px;
+	width: auto;
+	height: 250px;
 	border: solid black 5px;
-	margin: 0 auto;
 	background-color:white;
 	opacity:0.3;
-	margin-bottom:20px;
+	margin-bottom:35px;
 	padding:5px;
+	min-width:initial;
 }	
 
-.main-container {
+.main-container{
+	padding-left:10%;
+	padding-right:10%;
+	position:relative;
+	min-width: 1060px;
+	margin: 0 auto;"
+}
+
+.container {
 	margin-left: auto;
 	margin-right: auto;
-	width: 50%;
+	width: 60%;
+	min-width:600px;
 }
 
 button {
@@ -39,6 +53,14 @@ button {
 	opacity:0.9;
 }
 
+.key{
+	visibility:hidden;
+}
+
+.light{
+	visibility:hidden;
+}
+
 .combat button{
 	width:150px;
 	height:60px;
@@ -46,7 +68,17 @@ button {
 
 .combat {
 	text-align:center;
-	margin-bottom:20px;
+	margin-bottom:18px;
+}
+
+.skills button{
+	width:115px;
+	height:40px;
+}
+
+.skills {
+	text-align: center;
+	margin-bottom:10px;
 }
 
 .skills button{
@@ -67,11 +99,13 @@ ul {
 }
 
 .heroes {
-	float:left;
+	position:absolute;
+	left:10%;
 }
 
 .baddies {
-	float:right;
+	position:absolute;
+	right:10%;
 }
 
 .heart{

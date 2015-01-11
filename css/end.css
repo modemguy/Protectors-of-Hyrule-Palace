@@ -1,0 +1,23 @@
+body{
+	background-image: url("../img/zbg.jpg");
+	background-size:cover;
+	color:black;
+	}
+
+p{
+	font-size:25px;
+	color:#FFFF99;
+	font-size:bold;
+	text-align:center;
+	position:relative;
+	top:200px;
+}
+
+.play{
+	font-size:40px;
+}
+
+a{
+	text-decoration:none;
+	color:#FFFF99;
+}

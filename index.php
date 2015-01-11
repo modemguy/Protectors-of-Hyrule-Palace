@@ -29,7 +29,18 @@
 				
 				return submitOk;
 			}
-		</script>
+			
+			function getHeroInfo(hero){
+				var handler = function (key,value){
+					if (!key){return;}
+						document.getElementById(key).innerHTML = key + ":" + value;
+						
+						if (key == "name"){
+							document.getElementById("name").value = value;
+						}
+					}
+				ajaxRequest('../ajax/heroInfo.php', {'hero' : hero}, handler);
+}		</script>
 	</head>
 	
 	<body>	
@@ -43,17 +54,17 @@
 			
 			<p>Before you enter you must pick a Hero on the left as well as a name below.</p>
 			
-			<form name="char" action="game.php" onsubmit="return validateForm();">
-			<input type="text" value="Link" id="name" name="name">
+			<form method="POST" name="char" action="game.php" onsubmit="return validateForm();">
+			<input type="text" value="" id="name" name="name">
 			
 			<div>
-				<input onclick="getHeroInfo('link')" type="radio" class="radio_item" value="" name="item" id="radio1">
+				<input onclick="getHeroInfo('link')" type="radio" class="radio_item" value="link" name="item" id="radio1">
 				<label class="label_item" for="radio1"> <img src="img/link.jpg"> </label>
 		
-				<input onclick="getHeroInfo('lana')" type="radio" class="radio_item" value="" name="item" id="radio2">
+				<input onclick="getHeroInfo('lana')" type="radio" class="radio_item" value="lana" name="item" id="radio2">
 				<label class="label_item" for="radio2"> <img src="img/lana.jpg"> </label>
 
-				<input onclick="getHeroInfo('sheik')" type="radio" class="radio_item" value="" name="item" id="radio3">
+				<input onclick="getHeroInfo('sheik')" type="radio" class="radio_item" value="sheik" name="item" id="radio3">
 				<label class="label_item" for="radio3"> <img src="img/sheik.jpg"> </label>
 			</div>
 			<div>

@@ -1,0 +1,7 @@
+.divTable {display:table; width:auto; border:0px;}
+.divHeader {display:table-row; font-weight:bold;}
+.divRow {display:table-row;}
+.divCell {display:table-cell; padding: 5px 50px 5px 0px; border-bottom:1px solid #ddd;}
+a {text-decoration:none; color: blue;}
+ul {list-style-type: none; padding:0;}
+li {display: inline; margin-right:30px;}
